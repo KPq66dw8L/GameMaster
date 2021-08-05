@@ -1,3 +1,7 @@
+if (process.env.NODE_ENV !== 'production') {
+    require('dotenv').config();
+  }
+
 const Discord = require('discord.js');
 const { token } = require('./config.json')
 const client = new Discord.Client();
