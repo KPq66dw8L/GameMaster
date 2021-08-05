@@ -3,9 +3,10 @@ if (process.env.NODE_ENV !== 'production') {
   }
 
 const Discord = require('discord.js');
-const { token } = require('./config.json')
 const client = new Discord.Client();
 const prefix = "$"
+
+const token = process.env.TOKEN;
 
 client.on('ready', () => {console.log(`Started`);});
 
