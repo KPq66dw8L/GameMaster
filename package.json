@@ -1,24 +1,25 @@
 {
-  "name": "nodejs",
+  "name": "bot",
   "version": "1.0.0",
   "description": "",
-  "main": "bot.js",
+  "main": "commands.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node bot.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/KPq66dw8L/GameMaster.git"
+    "start": "node primary.js"
   },
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/KPq66dw8L/GameMaster/issues"
-  },
-  "homepage": "https://github.com/KPq66dw8L/GameMaster#readme",
   "dependencies": {
+    "assert": "^2.0.0",
     "discord.js": "^12.5.3",
-    "dotenv": "^10.0.0"
+    "dotenv": "^10.0.0",
+    "minecraft-api": "0.0.3",
+    "mysql": "^2.18.1",
+    "namemc": "^1.8.16",
+    "v8": "^0.1.0",
+    "xmlhttprequest": "^1.8.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.12"
   }
 }
