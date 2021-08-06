@@ -11,7 +11,7 @@ const token = process.env.TOKEN;
 client.on('ready', () => {console.log(`Started`);});
 
 client.on('message', message => {
-  if(!message.channel.id === null){
+  if(!message.channel.type === Discord.DMChannel){
   if(!message.content.startsWith(prefix) || message.author.bot) return; 
   const args = message.content.slice(prefix.length).split(/ +/);
   const command = args.shift().toLowerCase();
@@ -23,13 +23,16 @@ client.on('message', message => {
 
   }
 }else{
+    
+    if(!message.content.startsWith(prefix) || message.author.bot) return; 
+    const args = message.content.slice(prefix.length).split(/ +/);
+    const command = args.shift().toLowerCase();
+    if(command === 'join'){
+        if(args.length == 1){
+            
 
 
 }
-
-  
-    
-  
 });
 
 client.on('guildMemberAdd', guildMember =>{
